@@ -1,3 +1,27 @@
 .main {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 100vh;
+
+  //temporary
   outline: 2px dashed blue;
+
+  .main__charts {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+
+  .main__chart {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 50%;
+
+    //temporary
+    outline: 2px dashed pink;
+  }
 }

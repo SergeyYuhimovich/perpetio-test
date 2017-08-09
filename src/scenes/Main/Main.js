@@ -12,14 +12,28 @@ class Main extends Component {
 
         return (
             <div className="main">
-                <h1 className="heading">Bradford</h1>
+                <h1 className="main__heading">Bradford</h1>
+                <span className="main__subheading">Weather trends since</span>
 
                 <Switcher/>
 
-                <Chart type="temperatures"/>
-                <Chart type="afDays"/>
-                <Chart type="rain"/>
-                <Chart type="sunHours"/>
+                <div className="main__charts">
+                    <div className="main__chart">
+                        <Chart type="temperatures"/>
+                    </div>
+
+                    <div className="main__chart">
+                        <Chart type="afDays"/>
+                    </div>
+
+                    <div className="main__chart">
+                        <Chart type="rain"/>
+                    </div>
+
+                    <div className="main__chart">
+                        <Chart type="sunHours"/>
+                    </div>
+                </div>
             </div>
         )
     }
