@@ -1,3 +1,31 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
 .switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+  //temporary
   outline: 2px dashed green;
+
+  .switcher__btn {
+    @include sizing('height', (320px: 20px, 1920px: 40px));
+
+    flex-grow: 1;
+    max-width: 40px;
+  }
+
+  .switcher__btn--previous {
+    @extend .switcher__btn;
+  };
+
+  .switcher__btn--next {
+    @extend .switcher__btn;
+  }
+
+  .switcher__btn-icon {
+    font-size: 20px;
+  }
 }

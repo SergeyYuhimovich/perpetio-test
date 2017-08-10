@@ -1,5 +1,21 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
 .chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  padding: 25px;
+  padding: 15px;
   flex-shrink: 0;
+
+  .chart__title {
+    @include sizing('font-size', (320px: 13px, 1920px: 20px));
+    margin: 0 0 25px 0;
+  }
+
+  .chart__content {
+    display: flex;
+    height: 100%;
+  }
 }

@@ -1,11 +1,25 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
 .main {
   display: flex;
   flex-direction: column;
   height: auto;
   min-height: 100vh;
+  padding: 0 15px;
 
   //temporary
   outline: 2px dashed blue;
+
+  .main__heading {
+    @include sizing('font-size', (320px: 20px, 1920px: 30px));
+
+    text-align: center;
+  }
+
+  .main__subheading {
+    text-align: center;
+  }
 
   .main__charts {
     display: flex;

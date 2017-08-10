@@ -30,6 +30,12 @@ ul {
   list-style: none;
 }
 
+.fa,
+.fa::before,
+.fa::after {
+  font-family: 'FontAwesome';
+}
+
 .app {
   position: relative;
   min-width: 320px;
