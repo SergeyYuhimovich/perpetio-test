@@ -5,27 +5,47 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 10px;
 
   //temporary
   outline: 2px dashed green;
 
-  .switcher__btn {
-    @include sizing('height', (320px: 20px, 1920px: 40px));
+  .btn {
+    @include sizing('width', (320px: 25px, 1920px: 40px));
+    @include sizing('height', (320px: 25px, 1920px: 40px));
 
-    flex-grow: 1;
-    max-width: 40px;
+    margin: 5px;
+    padding: 0;
+    border: none;
+    line-height: 1;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      .btn__icon::before {
+        color: $palette-blue;
+      }
+    }
+
+    .btn__icon::before {
+      @include sizing('font-size', (320px: 20px, 1920px: 30px));
+    }
   }
 
-  .switcher__btn--previous {
-    @extend .switcher__btn;
+  .btn--previous {
+    @extend .btn;
   };
 
-  .switcher__btn--next {
-    @extend .switcher__btn;
+  .btn--next {
+    @extend .btn;
   }
 
-  .switcher__btn-icon {
-    font-size: 20px;
+  .year-select {
+    @include sizing('width', (320px: 190px, 1920px: 300px));
+    @include sizing('height', (320px: 25px, 1920px: 40px));
+    @include sizing('font-size', (320px: 14px, 1920px: 20px));
+
+    margin: 5px;
+    text-align: center;
   }
 }

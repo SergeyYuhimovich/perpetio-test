@@ -7,12 +7,19 @@ import './Main.css';
 
 
 class Main extends Component {
+    componentDidMount() {
+        this.props.getWeatherData();
+    }
+
     render() {
-        const {reducers: { years, currentYear }, onPreviousButtonClick, onNextButtonClick, onYearSelect } = this.props;
+        const {reducers: { data, city, years, currentYear }, onPreviousButtonClick, onNextButtonClick, onYearSelect } = this.props;
+
+        console.log(data);
+        console.log(city);
 
         return (
             <div className="main">
-                <h1 className="main__heading">Bradford</h1>
+                <h1 className="main__heading">{city}, UK</h1>
                 <span className="main__subheading">{'Weather trends since ' + years[0]}</span>
 
                 <Switcher years={years}

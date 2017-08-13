@@ -9,7 +9,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  outline: none;
   font-family: 'Open Sans', sans-serif;
+  color: $palette-black;
 }
 
 html,

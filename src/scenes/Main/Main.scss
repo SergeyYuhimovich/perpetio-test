@@ -12,13 +12,25 @@
   outline: 2px dashed blue;
 
   .main__heading {
-    @include sizing('font-size', (320px: 20px, 1920px: 30px));
+    @include sizing('margin-top', (320px: 15px, 1920px: 20px));
+    @include sizing('margin-bottom', (320px: 5px, 1920px: 10px));
+    @include sizing('font-size', (320px: 32px, 1920px: 50px));
 
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     text-align: center;
+    line-height: 1;
+    font-weight: 300;
   }
 
   .main__subheading {
+    @include sizing('margin-bottom', (320px: 5px, 1920px: 10px));
+    @include sizing('font-size', (320px: 15px, 1920px: 22px));
+
     text-align: center;
+    color: $palette-gray;
   }
 
   .main__charts {
@@ -34,8 +46,13 @@
     justify-content: center;
     align-items: stretch;
     width: 50%;
+    min-height: 200px;
 
     //temporary
     outline: 2px dashed pink;
+
+    @include tablet-portrait {
+      width: 100%;
+    }
   }
 }
