@@ -5,7 +5,6 @@ import Switcher from './components/Switcher';
 import Chart from './components/Chart';
 import './Main.css';
 
-
 class Main extends Component {
     componentDidMount() {
         this.props.getWeatherData();
@@ -58,6 +57,5 @@ class Main extends Component {
         )
     }
 }
-
 
 export default connect( ( {reducers} ) => ( {reducers} ), actions )(Main);
