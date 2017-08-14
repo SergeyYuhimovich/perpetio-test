@@ -1,4 +1,6 @@
 import React from 'react';
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 import FontAwesome from 'react-fontawesome';
 import './Switcher.css';
 
@@ -11,6 +13,15 @@ const Switcher = ( {years, currentYear, onPreviousButtonClick, onNextButtonClick
         onYearSelect(e.target.value);
     };
 
+    let options = [
+        { className: 'year-select__option', value: 'one', label: 'One' },
+        { className: 'year-select__option', value: 'two', label: 'Two' }
+    ];
+
+    function logChange(val) {
+        console.log("Selected: " + JSON.stringify(val));
+    }
+
     return (
         <div className="switcher">
             <button className="btn--previous"
@@ -21,11 +32,12 @@ const Switcher = ( {years, currentYear, onPreviousButtonClick, onNextButtonClick
                 />
             </button>
 
-            <select className="year-select" value={currentYear} onChange={onYearChange}>
-                {years.map((year) =>
-                    <option value={year} key={year}>{year}</option>
-                )}
-            </select>
+            <Select
+                className="year-select"
+                value="one"
+                options={options}
+                onChange={logChange}
+            />
 
             <button className="btn--next"
                     onClick={onNextButtonClick}

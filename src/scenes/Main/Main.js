@@ -30,26 +30,26 @@ class Main extends Component {
 
                 <div className="main__charts">
                     <div className="main__chart">
-                        <Chart type="temperatures"
-                               title="Maximal and minimal temperatures, °C"
+                        <Chart type="temperature"
+                               title="Temperature"
                         />
                     </div>
 
                     <div className="main__chart">
                         <Chart type="af"
-                               title="Air frost days"
+                               title="Air frost"
                         />
                     </div>
 
                     <div className="main__chart">
                         <Chart type="rain"
-                               title="Rain, mm"
+                               title="Rain"
                         />
                     </div>
 
                     <div className="main__chart">
-                        <Chart type="sunHours"
-                               title="Sun hours"
+                        <Chart type="sun"
+                               title="Sun"
                         />
                     </div>
                 </div>

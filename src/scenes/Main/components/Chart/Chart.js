@@ -69,7 +69,7 @@ const Chart = ( {type, title} ) => {
             <h2 className="chart__title">{title}</h2>
 
             <div className="chart__content">
-                {type === 'temperatures' && <ResponsiveContainer debounce="1">
+                {type === 'temperature' && <ResponsiveContainer debounce="1">
                     <AreaChart data={temperatures}>
                         <XAxis dataKey="month"/>
                         <YAxis/>
@@ -97,7 +97,7 @@ const Chart = ( {type, title} ) => {
                     </BarChart>
                 </ResponsiveContainer>}
 
-                {type === 'sunHours' && <ResponsiveContainer debounce="1">
+                {type === 'sun' && <ResponsiveContainer debounce="1">
                     <AreaChart data={sunHours}>
                         <XAxis dataKey="month"/>
                         <YAxis/>

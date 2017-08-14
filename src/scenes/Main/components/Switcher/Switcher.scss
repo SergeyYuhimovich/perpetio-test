@@ -41,11 +41,10 @@
   }
 
   .year-select {
-    @include sizing('width', (320px: 190px, 1920px: 300px));
-    @include sizing('height', (320px: 25px, 1920px: 40px));
-    @include sizing('font-size', (320px: 14px, 1920px: 20px));
+    width: 190px;
 
-    margin: 5px;
-    text-align: center;
+    .Select-control {
+      box-shadow: none;
+    }
   }
 }
