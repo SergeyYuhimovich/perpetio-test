@@ -9,7 +9,7 @@
 <p>This project was bootstrapped with <a href="https://github.com/facebookincubator/create-react-app">Create React App</a>.</p>
 <p>Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide <a href="https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md">here</a>.</p>
-<h2 id="available-scripts"><a href="#available-scripts" name="available-scripts">Available Scripts</a></h2>
+<h2 id="available-scripts">Available Scripts</h2>
 <p>In the project directory, you can run:</p>
 <h3 id="npm-start"><code>npm start</code></h3>
 <p>Runs the app in the development mode.<br>
