@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8a92671-736e-4d53-b60c-dcd2a2ddb296" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/perpetio-test.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/index.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scenes/Main/Main.js" afterPath="$PROJECT_DIR$/src/scenes/Main/Main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scenes/Main/Main.scss" afterPath="$PROJECT_DIR$/src/scenes/Main/Main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scenes/Main/components/Chart/Chart.js" afterPath="$PROJECT_DIR$/src/scenes/Main/components/Chart/Chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scenes/Main/components/Chart/Chart.scss" afterPath="$PROJECT_DIR$/src/scenes/Main/components/Chart/Chart.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/_variables.scss" afterPath="$PROJECT_DIR$/src/utils/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boilerplate_readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,14 +50,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Chart.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Chart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/Main/components/Chart/Chart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="285">
+                <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="boilerplate_readme.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boilerplate_readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="120">
+                <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -114,19 +132,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Switcher.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/Main/components/Switcher/Switcher.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>supported langu</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -162,6 +173,7 @@
         <option value="$PROJECT_DIR$/src/utils/_variables.scss" />
         <option value="$PROJECT_DIR$/src/scenes/Main/components/Chart/Chart.scss" />
         <option value="$PROJECT_DIR$/src/scenes/Main/components/Chart/Chart.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -616,7 +628,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502634965394</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Charts styling">
+      <created>1502708583750</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1502708583750</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -681,21 +700,14 @@
     <MESSAGE value="Basic layout and styling of Charts." />
     <MESSAGE value=" - basic actions and reducers implementation;&#10; - change testData structure;&#10; - layout and styling improvements." />
     <MESSAGE value=" - services for getting data;&#10; - basic data parsing logic;&#10; - layout and styling improvements." />
-    <option name="LAST_COMMIT_MESSAGE" value=" - services for getting data;&#10; - basic data parsing logic;&#10; - layout and styling improvements." />
+    <MESSAGE value="Charts styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Charts styling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/testData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="144" column="20" lean-forward="false" selection-start-line="144" selection-start-column="12" selection-end-line="144" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/Main/components/Switcher/Switcher.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -976,19 +988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1099,11 +1098,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/Main/components/Chart/Chart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="450">
+          <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boilerplate_readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>
