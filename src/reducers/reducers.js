@@ -1,46 +1,138 @@
 import * as types from '../actions/actionTypes';
-import { testData } from '../testData';
-
-import _ from 'lodash';
+//import { temperatures, afDays, rainMm, sunHours } from '../testData';
 
 export const initialState = {
     city: '',
-    data: [],
+    rawData: [],
+    data: {},
     weatherDataLoading: false,
     weatherDataError: false,
-    years: Object.keys(testData),
-    currentYear: Object.keys(testData)[Object.keys(testData).length - 1]
+    years: [],
+    currentYear: 0
 };
 
-class monthData {
-    constructor(tMax, tMin, af, rain, sun) {
-        this.tMax = tMax;
-        this.tMin = tMin;
-        this.af = af;
-        this.rain = rain;
-        this.sun = sun;
-    }
-}
+function makeRawData(textData) {
+    let arr = textData.split('\n');
+    arr.splice(0, 7);
+    arr.pop();
 
-function dataParse(rawData) {
-    let rawArr = rawData.split('\n');
-    rawArr.splice(0, 7);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].replace( / +/g, ' ' );
+        arr[i] = arr[i].replace('*', '');
+        arr[i] = arr[i].replace('---', '');
+        arr[i] = arr[i].split(' ');
+        arr[i].splice(0, 1);
 
-    let objData = {};
-
-    for (let i = 0; i < rawArr.length; i++) {
-        rawArr[i] = rawArr[i].replace( / +/g, ' ' );
-        rawArr[i] = rawArr[i].replace('*', '');
-        rawArr[i] = rawArr[i].replace('---', '');
-        rawArr[i] = rawArr[i].split(' ');
-        rawArr[i].splice(0, 1);
-
-        if (rawArr[i].length === 8) {
-            rawArr[i].splice(7, 1);
+        if (arr[i].length === 8) {
+            arr[i].splice(7, 1);
         }
     }
 
-    return rawArr;
+    console.log(arr);
+
+    return arr;
+}
+
+function makeYearsArr(arr) {
+  let years = [];
+
+  years.push(arr[0][0]);
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i][0] !== years[years.length - 1]) {
+      years.push(arr[i][0]);
+    }
+  }
+
+  return years;
+}
+
+function dataParse(rawData) {
+
+    const months = {
+        1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'Apr', 5: 'May', 6: 'Jun',
+        7: 'Jul', 8: 'Aug', 9: 'Sep', 10: 'Oct', 11: 'Nov', 12: 'Dec'
+    };
+
+    class temperatureData {
+        constructor(month) {
+            this.month = months[month[1]];
+            this.value = [month[3], month[2]];
+        }
+    }
+
+    class afDaysData {
+        constructor(month) {
+            this.month = months[month[1]];
+            this.value = month[4];
+        }
+    }
+
+    class rainMmData {
+        constructor(month) {
+            this.month = months[month[1]];
+            this.value = month[5];
+        }
+    }
+
+    class sunHoursData {
+        constructor(month) {
+            this.month = months[month[1]];
+            this.value = month[6];
+        }
+    }
+
+    let data = {
+        temperatures : {},
+        afDays: {},
+        rainMm: {},
+        sunHours: {}
+    };
+
+    let parsedYear = rawData[0][0];
+
+    data.temperatures[parsedYear] = [];
+    data.afDays[parsedYear] = [];
+    data.rainMm[parsedYear] = [];
+    data.sunHours[parsedYear] = [];
+
+    let temperature = new temperatureData(rawData[0]);
+    let afDays = new afDaysData(rawData[0]);
+    let rainMm = new rainMmData(rawData[0]);
+    let sunHours = new sunHoursData(rawData[0]);
+
+    data.temperatures[parsedYear].push(temperature);
+    data.afDays[parsedYear].push(afDays);
+    data.rainMm[parsedYear].push(rainMm);
+    data.sunHours[parsedYear].push(sunHours);
+
+    for (let i = 1; i < rawData.length; i++) {
+        temperature = new temperatureData(rawData[i]);
+        afDays = new afDaysData(rawData[i]);
+        rainMm = new rainMmData(rawData[i]);
+        sunHours = new sunHoursData(rawData[i]);
+
+        if (rawData[i][0] === parsedYear) {
+            data.temperatures[parsedYear].push(temperature);
+            data.afDays[parsedYear].push(afDays);
+            data.rainMm[parsedYear].push(rainMm);
+            data.sunHours[parsedYear].push(sunHours);
+        } else {
+            parsedYear = rawData[i][0];
+
+            data.temperatures[parsedYear] = [];
+            data.afDays[parsedYear] = [];
+            data.rainMm[parsedYear] = [];
+            data.sunHours[parsedYear] = [];
+
+            data.temperatures[parsedYear].push(temperature);
+            data.afDays[parsedYear].push(afDays);
+            data.rainMm[parsedYear].push(rainMm);
+            data.sunHours[parsedYear].push(sunHours);
+        }
+    }
+
+    return data;
 }
 
 export default function reducers(state = initialState, action = {}) {
@@ -51,7 +143,18 @@ export default function reducers(state = initialState, action = {}) {
 
         case types.GET_WEATHER_DATA_SUCCESS:
             console.log('success');
-            return {...state, weatherDataLoading: false, city: action.payload.split('\n')[0], data: dataParse(action.payload)};
+
+            let rawData = makeRawData(action.payload);
+
+            let data = dataParse(rawData);
+
+            let yearsArr = makeYearsArr(rawData);
+
+            let currentYear = yearsArr.slice(-1)[0];
+
+            let city = action.payload.split('\n')[0];
+
+            return {...state, weatherDataLoading: false, data: data, years: yearsArr, currentYear: currentYear, city: city};
 
         case types.GET_WEATHER_DATA_ERROR:
             console.log('error');

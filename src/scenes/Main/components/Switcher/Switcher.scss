@@ -7,9 +7,6 @@
   align-items: center;
   padding: 10px;
 
-  //temporary
-  outline: 2px dashed green;
-
   .btn {
     @include sizing('width', (320px: 25px, 1920px: 40px));
     @include sizing('height', (320px: 25px, 1920px: 40px));

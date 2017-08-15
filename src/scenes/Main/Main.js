@@ -11,10 +11,17 @@ class Main extends Component {
     }
 
     render() {
-        const {reducers: { data, city, years, currentYear }, onPreviousButtonClick, onNextButtonClick, onYearSelect } = this.props;
+        const {reducers: { weatherDataLoading, data, years, currentYear, city }, onPreviousButtonClick, onNextButtonClick, onYearSelect } = this.props;
 
         console.log(data);
         console.log(city);
+        console.log(years);
+        console.log(currentYear);
+
+        let temperatures = data.temperatures[2016];
+        let afDays = data.afDays[2016];
+        let rainMm = data.rainMm[2016];
+        let sunHours = data.sunHours[2016];
 
         return (
             <div className="main">
@@ -31,24 +38,28 @@ class Main extends Component {
                 <div className="main__charts">
                     <div className="main__chart">
                         <Chart type="temperature"
+                               data={data.temperatures[2016]}
                                title="Temperature"
                         />
                     </div>
 
                     <div className="main__chart">
                         <Chart type="af"
+                               data={data.afDays[2016]}
                                title="Air frost"
                         />
                     </div>
 
                     <div className="main__chart">
                         <Chart type="rain"
+                               data={data.rainMm[2016]}
                                title="Rain"
                         />
                     </div>
 
                     <div className="main__chart">
                         <Chart type="sun"
+                               data={data.sunHours[2016]}
                                title="Sun"
                         />
                     </div>

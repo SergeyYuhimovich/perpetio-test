@@ -9,9 +9,6 @@
   min-height: 100vh;
   padding: 0 15px;
 
-  //temporary
-  outline: 2px dashed blue;
-
   .main__heading {
     @include sizing('margin-top', (320px: 15px, 1920px: 20px));
     @include sizing('margin-bottom', (320px: 5px, 1920px: 10px));
@@ -48,9 +45,6 @@
     align-items: stretch;
     width: 50%;
     min-height: 200px;
-
-    //temporary
-    outline: 2px dashed pink;
 
     @include tablet-portrait {
       width: 100%;
